@@ -85,7 +85,7 @@ def assign_solver(cost, coeff, resources, r, c):
     print(model)
 
     # Solve the optimization problem
-    status = model.solve(PULP_CBC_CMD(msg=False))
+    status = model.solve(solver=GLPK(msg=False))
 
     # Get the results
     print('##############Solution of LPP is #################n\n')
